@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7dce9">
+<title>For Misbah Api ♡ — From Ahmad</title>
+<style>
+  :root{--pink:#f7dce9;--rose:#d978a2;--deep:#874765;--lav:#e8e0fb;--cream:#fffafc;--ink:#51384a;--gold:#d9b76d}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 10% 10%,#fff 0,transparent 30%),linear-gradient(135deg,#fff5f9,#f4edff 55%,#fff7f1);overflow-x:hidden}
+  button{font:inherit;cursor:pointer}
+  .sparkles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+  .petal{position:absolute;top:-30px;color:#d978a2;opacity:.45;animation:fall linear infinite}
+  @keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+  .wrap{position:relative;z-index:1;width:min(980px,92%);margin:auto;padding:28px 0 48px}
+  header{text-align:center;padding:22px 12px 12px}
+  .eyebrow{letter-spacing:4px;text-transform:uppercase;font:600 11px Arial,sans-serif;color:#a05d7d}
+  h1{font-size:clamp(2.6rem,8vw,5.5rem);line-height:.98;margin:18px 0 12px;color:#9b5276;font-weight:500}
+  .subtitle{font-size:1.08rem;line-height:1.7;max-width:590px;margin:0 auto;color:#76566a}
+  .date-pill{display:inline-block;margin-top:20px;padding:9px 17px;border:1px solid #e7bfd2;border-radius:99px;background:#ffffff9c;font:12px Arial,sans-serif;letter-spacing:1px}
+  .nav{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:26px auto 25px}
+  .nav button{border:1px solid #e5c3d5;background:#fff9;border-radius:99px;padding:11px 16px;color:#8a4f6d;transition:.25s;box-shadow:0 4px 15px #a65f7d0d}
+  .nav button:hover,.nav button.active{background:#a85f80;color:#fff;border-color:#a85f80;transform:translateY(-2px)}
+  .page{display:none;animation:appear .45s ease}
+  .page.active{display:block}
+  @keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .card{background:#ffffffb8;border:1px solid #fff;box-shadow:0 18px 55px #95627b17;border-radius:28px;padding:clamp(24px,5vw,48px);backdrop-filter:blur(12px);text-align:center;position:relative;overflow:hidden}
+  .card:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#f7dce966;top:-115px;right:-60px}
+  .icon{font-size:2.8rem;margin-bottom:12px}
+  h2{font-weight:500;font-size:clamp(1.8rem,5vw,3rem);color:#985573;margin:8px 0 18px}
+  p{font-size:1.08rem;line-height:1.9;margin:12px auto;max-width:690px}
+  .arabic{font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.9;color:#8e4d70;direction:rtl;margin:22px 0 8px}
+  .translation{font-style:italic;color:#80677a}
+  .signature{font-size:1.35rem;color:#9d5678;margin-top:25px}
+  .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{border:0;border-radius:99px;padding:13px 21px;background:linear-gradient(135deg,#c8799d,#a95e82);color:white;box-shadow:0 8px 20px #a95e8230;transition:.2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 11px 25px #a95e8240}
+  .btn.secondary{background:#fff;color:#985573;border:1px solid #e6c2d4;box-shadow:none}
+  .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:22px}
+  .mini{padding:20px 12px;border:1px solid #f0d6e2;background:#fff9;border-radius:20px}
+  .mini .big{font-size:1.9rem}
+  .mini p{font:13px/1.6 Arial,sans-serif;margin:8px auto 0}
+  .quote{font-size:clamp(1.35rem,4vw,2rem);line-height:1.6;color:#995675}
+  .hidden-note{display:none;margin:20px auto 0;padding:20px;border-radius:20px;background:#fff0f6;border:1px dashed #d79bb8;max-width:600px}
+  .hidden-note.show{display:block;animation:appear .4s ease}
+  .footer{text-align:center;font:12px Arial,sans-serif;color:#9b7b8c;margin-top:27px;letter-spacing:.4px}
+  .heart{display:inline-block;color:#d978a2;animation:beat 1.4s infinite}
+  @keyframes beat{50%{transform:scale(1.25)}}
+  .confetti{position:fixed;z-index:5;pointer-events:none;font-size:22px;animation:burst 1.8s ease-out forwards}
+  @keyframes burst{0%{transform:translateY(0) scale(.5);opacity:1}100%{transform:translateY(-180px) rotate(220deg) scale(1.4);opacity:0}}
+  @media(max-width:600px){.wrap{width:94%;padding-top:12px}.mini-grid{grid-template-columns:1fr}.nav{gap:7px}.nav button{padding:10px 12px;font-size:13px}.card{border-radius:22px}}
+  @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}}
+
+  /* Extra polish: responsive cards, hover lift, and mobile-friendly touch targets */
+  .card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+  .card:hover{box-shadow:0 24px 65px #95627b24;border-color:#f4d7e5}
+  .mini{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+  .mini:hover{transform:translateY(-6px) scale(1.015);box-shadow:0 12px 28px #a85f8018;border-color:#e4b5cb}
+  .nav button:focus-visible,.btn:focus-visible{outline:3px solid #bd7fa0;outline-offset:3px}
+  .btn:active,.nav button:active{transform:scale(.97)}
+  @media(min-width:900px){.mini-grid{gap:17px}.mini{padding:25px 18px}}
+  @media(max-width:600px){
+    .wrap{width:min(100% - 24px,520px);padding:10px 0 30px}
+    header{padding:18px 4px 8px}
+    h1{font-size:clamp(2.45rem,12vw,4rem);line-height:1.04}
+    .subtitle{font-size:1rem;line-height:1.65}
+    .date-pill{font-size:10px;letter-spacing:.7px;padding:9px 12px}
+    .nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:20px auto}
+    .nav button{min-height:44px;padding:10px 8px;font-size:13px}
+    .card{padding:25px 18px;border-radius:22px}
+    h2{font-size:clamp(1.7rem,8vw,2.3rem)}
+    p{font-size:1rem;line-height:1.8}
+    .arabic{line-height:1.8;overflow-wrap:anywhere}
+    .mini-grid{grid-template-columns:1fr;gap:10px}
+    .mini{display:grid;grid-template-columns:44px 1fr;align-items:center;text-align:left;column-gap:10px;padding:14px}
+    .mini .big{grid-row:span 2;font-size:1.7rem}
+    .mini strong{align-self:end}
+    .mini p{margin:4px 0 0;font-size:13px}
+    .actions{gap:9px}
+    .btn{min-height:44px;padding:12px 16px;font-size:14px}
+    .signature{line-height:1.6}
+  }
+  @media(max-width:360px){.nav button{font-size:12px}.card{padding:21px 14px}.btn{width:100%}}
+
+</style>
+</head>
+<body>
+<div class="sparkles" id="petals" aria-hidden="true"></div>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">A little gift for Misbah Api, from her brother</div>
+    <h1>Happy Birthday,<br>Misbah Api <span class="heart">♡</span></h1>
+    <p class="subtitle">A little late, but filled with love, duas, and all the good wishes your heart deserves.</p>
+    <div class="date-pill">28 OCTOBER · YOUR 22ND BIRTHDAY</div>
+  </header>
+
+  <nav class="nav" aria-label="Birthday card navigation">
+    <button class="active" data-page="welcome">♡ A Little Note</button>
+    <button data-page="dua">☾ Duas</button>
+    <button data-page="memories">✿ Birthday Wishes</button>
+    <button data-page="surprise">🎀 Surprise</button>
+  </nav>
+
+  <section class="page active" id="welcome">
+    <div class="card">
+      <div class="icon">🌷</div>
+      <h2>To my lovely Misbah Api</h2>
+      <p>Assalamu Alaikum, Misbah Api!</p>
+      <p>I know your birthday was on <strong>28 October</strong>, and you turned <strong>22</strong>. I’m sorry I couldn’t wish you on the day itself. I was caught up in my papers, and it slipped my mind—but please know that being late with a message doesn’t mean you matter any less to me.</p>
+      <p>You deserve happiness, peace, success, and so many beautiful moments. May Allah always keep you smiling and protect the light you bring into our family.</p>
+      <div class="signature">With love, your brother,<br><strong>Ahmad ♡</strong></div>
+      <div class="actions"><button class="btn" data-go="dua">Read your duas ☾</button><button class="btn secondary" data-go="memories">More birthday wishes</button></div>
+    </div>
+  </section>
+
+  <section class="page" id="dua">
+    <div class="card">
+      <div class="icon">☾ ✨</div>
+      <h2>My duas for you</h2>
+      <p class="arabic" lang="ar">بَارَكَ اللَّهُ فِي عُمْرِكِ وَرَزَقَكِ السَّعَادَةَ وَالْبَرَكَةَ</p>
+      <p class="translation">May Allah bless your life and grant you happiness and blessings.</p>
+      <div class="mini-grid">
+        <div class="mini"><div class="big">🤍</div><strong>Peace</strong><p>May Allah fill your heart with sukoon and contentment.</p></div>
+        <div class="mini"><div class="big">🌸</div><strong>Barakah</strong><p>May He put barakah in your age, health, rizq, and every good effort.</p></div>
+        <div class="mini"><div class="big">🤲</div><strong>Protection</strong><p>May Allah protect you from every harm and guide you to what is best.</p></div>
+      </div>
+      <p class="arabic" lang="ar">آمِين يَا رَبَّ الْعَالَمِينَ</p>
+      <p class="translation">Ameen, Ya Rabb al-'Alameen.</p>
+      <div class="actions"><button class="btn secondary" data-go="welcome">← Previous card</button><button class="btn" data-go="memories">Next card ✿</button></div>
+    </div>
+  </section>
+
+  <section class="page" id="memories">
+    <div class="card">
+      <div class="icon">🎂🌸🎀</div>
+      <h2>22 looks beautiful on you</h2>
+      <p class="quote">May this new year of your life bring you closer to every good thing you pray for.</p>
+      <div class="mini-grid">
+        <div class="mini"><div class="big">🌷</div><strong>More smiles</strong><p>May your days be full of laughter and kind people.</p></div>
+        <div class="mini"><div class="big">⭐</div><strong>Big dreams</strong><p>May Allah make your halal dreams easy to reach.</p></div>
+        <div class="mini"><div class="big">🦋</div><strong>Beautiful growth</strong><p>May every year bring wisdom, strength, and peace.</p></div>
+      </div>
+      <p>Even though this wish is arriving late, I’m sending you the same sincere love today. You’ll always be my sister, and I’ll always pray for your happiness.</p>
+      <div class="actions"><button class="btn secondary" data-go="dua">← Back to duas</button><button class="btn" data-go="surprise">Open your surprise 🎁</button></div>
+    </div>
+  </section>
+
+  <section class="page" id="surprise">
+    <div class="card">
+      <div class="icon">🎁💌</div>
+      <h2>One last little thing…</h2>
+      <p class="quote">A birthday wish can be late. Love and duas don’t have an expiry date.</p>
+      <p>Misbah, may Allah grant you a life full of imaan, good health, halal success, loving relationships, and peace in this world and the Hereafter.</p>
+      <button class="btn" id="reveal">Tap to open your little letter 💌</button>
+      <div class="hidden-note" id="letter">
+        <p><strong>Dear Misbah Api,</strong></p>
+        <p>I’m sorry for missing your birthday on 28 October. Exams took over my mind, and I forgot something important. I hope you forgive your forgetful brother!</p>
+        <p>May Allah accept your duas, protect you wherever you go, keep you steadfast in faith, and bless you with what is best for your dunya and akhirah.</p>
+        <p>Belated happy 22nd birthday, Misbah Api! 🌸</p>
+        <div class="signature">Always your brother,<br><strong>Ahmad Talib ♡</strong></div>
+      </div>
+      <div class="actions"><button class="btn secondary" data-go="welcome">↺ Read from the beginning</button><button class="btn" id="celebrate">Send some birthday sparkle ✨</button></div>
+    </div>
+  </section>
+  <div class="footer">Made with love & duas by Ahmad <span class="heart">♥</span> for Misbah Api</div>
+</main>
+<script>
+  // One HTML page; buttons switch between card-like sections.
+  const pages = [...document.querySelectorAll('.page')];
+  const navButtons = [...document.querySelectorAll('.nav button')];
+  function showPage(id){
+    pages.forEach(p=>p.classList.toggle('active',p.id===id));
+    navButtons.forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  navButtons.forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.go)));
+  document.getElementById('reveal').addEventListener('click',()=>{
+    const letter=document.getElementById('letter');
+    letter.classList.toggle('show');
+    document.getElementById('reveal').textContent=letter.classList.contains('show')?'Close the letter 💗':'Tap to open your little letter 💌';
+  });
+  document.getElementById('celebrate').addEventListener('click',()=>{
+    const symbols=['♡','🌸','✨','💗','🌷','🎀'];
+    for(let i=0;i<26;i++){
+      const el=document.createElement('span');el.className='confetti';
+      el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+      el.style.left=Math.random()*100+'vw';el.style.top=(55+Math.random()*35)+'vh';
+      el.style.animationDelay=(Math.random()*.45)+'s';document.body.appendChild(el);
+      setTimeout(()=>el.remove(),2400);
+    }
+  });
+  const petalBox=document.getElementById('petals');
+  for(let i=0;i<20;i++){
+    const p=document.createElement('span');p.className='petal';p.textContent=['✿','✧','♡','❀'][i%4];
+    p.style.left=Math.random()*100+'%';p.style.animationDuration=(9+Math.random()*13)+'s';
+    p.style.animationDelay=(-Math.random()*18)+'s';p.style.fontSize=(12+Math.random()*16)+'px';
+    petalBox.appendChild(p);
+  }
+</script>
+</body>
+</html>
